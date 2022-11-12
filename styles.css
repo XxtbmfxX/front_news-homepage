@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root{
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+
+}
+
+
+body{
+    background-color: var(--Off-white);
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--Very-dark-blue);
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+p{
+    color: var(--Dark-grayish-blue);
+    line-height: 1.5;
+}
+
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-block: 20px;
+}
+
+.Header_menu{
+    display: none;
+}
+
+
+.Main, .Main_info, .Main_news, .Main_top{
+    margin-block: 20px;
+}
+
+.Main, .Main_info, .Main_news, .Main_top,.Main_info-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Main{
+    padding: 10px;
+}
+
+
+.Main_info{
+    height: 70vh;
+}
+
+.Main_info-text{
+    justify-items: start;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.Main_info button{
+    background-color: var(--Soft-red);
+    padding: 10px;
+    color: white;
+    border: none;
+    letter-spacing: 3px;
+    margin-block: 10px;
+    align-self: flex-start;
+}
+
+.Main_info button:hover{
+    background-color: rgb(223, 83, 83);
+    padding: 10px;
+}
+
+
+.Main_image{
+max-width: 100%;
+
+height: auto;
+}
+
+
+
+hr{
+    width: 100%;
+}
+
+.Main_news{
+    background-color: var(--Very-dark-blue);
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+    height: 350px;
+}
+
+.Main_news h2 {
+    color: var(--Soft-orange);
+    align-self: flex-start;
+}
+
+.Main_news h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.Main_news p{
+    color: var(--Grayish-blue);
+
+}
+
+.Main_news-item{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

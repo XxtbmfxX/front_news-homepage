@@ -13,11 +13,17 @@
   
 </head>
 <body>
- 
+ <div class="dummy"></div>
   <header class="Header" >
     
     <img src="./assets/images/logo.svg" alt="logo">
+    <svg class="Header-burger"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
     <nav class="Header_menu">
+      <svg  class="Header_close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+      </svg>
       <ul>
         <li>Home</li>
         <li>New</li>
@@ -71,24 +77,37 @@
 
     <article class="Main_top">
       <section class="Main_top-item">
-        <h4>01</h4>
-        <p>Reviving Retro PCs</p>
-        <p>What happens when old PCs are given modern upgrades?</p>
+        <img src="./assets/images/image-retro-pcs.jpg" alt="" class="Main_top-image">
+        <div class="Main_top-text">
+
+          <h4>01</h4>
+          <p>Reviving Retro PCs</p>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
       </section>
 
 
       <section class="Main_top-item">
+        <img src="./assets/images/image-top-laptops.jpg" alt="" class="Main_top-image">
+
+        <div class="Main_top-text">
         <h4>02</h4>
         <p>The Growth of Gaming</p>
         <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+
       </section>
 
 
       <section class="Main_top-item">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="" class="Main_top-image">
+
+        <div class="Main_top-text">
         <h4>03</h4>
         <p>Reviving Retro PCs</p>
         <p>What happens when old PCs are given modern upgrades?</p>
-      </section>
+      </div>
+      </article>
 
 
   </main>
@@ -100,5 +119,45 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+
+  <script>
+    const burger = document.querySelector('.Header-burger')
+    const menu = document.querySelector('.Header_menu')
+    const close = document.querySelector('.Header_close')
+    const body = document.body
+    const height = screen.height    
+
+    const dummy = document.querySelector('.dummy')
+    dummy.style.height = height
+
+
+
+    function preventScroll(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        return false;
+    }
+
+
+
+    burger.addEventListener('click', () => {
+      menu.style.display = "block"
+      dummy.style.display = "block" 
+      body.addEventListener('wheel', preventScroll, {passive: false});
+
+    })
+
+    close.addEventListener('click', () =>{
+      menu.style.display = "none"
+      dummy.style.display = "none"      
+      body.removeEventListener('wheel', preventScroll);  
+
+    })
+
+
+
+  </script>
 </body>
 </html>

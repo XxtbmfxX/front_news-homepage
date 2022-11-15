@@ -24,14 +24,8 @@
 
 body{
     background-color: var(--Off-white);
-    z-index: 1;
 }
 
-img{
-    max-width: 100%;
-
-height: auto;
-}
 
 h1{
     font-size: 2.5rem;
@@ -124,7 +118,7 @@ button:hover{
     margin-block: 20px;
 }
 
-.Main, .Main_info, .Main_news, .Main_top,.Main_info-text,.Main_top-item{
+ .Main_info,  .Main_news, .Main_info-text,.Main_top-item{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,12 +126,13 @@ button:hover{
 }
 
 .Main{
+    display: grid;
     padding: 20px;
 }
 
 
 .Main_info{
-    height: 70vh;
+    height: 300px;
 }
 
 .Main_info-text{
@@ -163,16 +158,19 @@ button:hover{
 }
 
 
-.Main_image{
-    max-width: 500px;
+.Main_img{
+    background-image: url('./assets/images/image-web-3-mobile.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
-    height: auto;
-
+    height: 50vh;
+    max-height: 500px;
+    
 }
 
 
-
-hr{
+.Hr{
     width: 100%;
 }
 
@@ -216,8 +214,15 @@ hr{
     flex-direction: row;    
     margin-bottom: 20px;
     max-width: 570px;
+    justify-content: start;
+
 }
 
+.Main_top{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
 
 .Main_top-text{
     margin-left: 10px;
@@ -250,6 +255,159 @@ hr{
 
 @media (min-width: 1440px) {
 
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Hr{
+        border: 1px solid var(--Dark-grayish-blue);
+    }
+  
+
+
+    .Main{
+        display: grid;
+        grid-template-areas: 
+        'h h h'
+        'img img new'
+        'text text new'
+        'top top top'
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 340px 230px;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        gap: 20px;
+        height: 80%;
+        width: 70%;
+
+    }
+
+    .Header{
+        grid-area: h;
+        padding: 0px;
+        justify-content: space-between;
+        color: var(--Dark-grayish-blue);
+    }
+
+    .Header_menu ul{
+        justify-content: right;
+    }
+
+    .Header_menu ul li{
+        font-size: 1.2rem;
+
+    }
+
+
+    .Header_menu ul li:nth-child(5){
+        margin-right: 0px;
+    }
+
+
+    .Main_img {
+        background: url('./assets/images/image-web-3-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-area: img;
+        width: 100%;
+        height: 355px;
+        margin-top: 53px;
+    }
+ 
+.Main_info{
+    flex-direction: row;
+    justify-items: space-between;
+    grid-area: text;
+    width: 100%;
+    margin-top: 65px;
+}
+
+.Main_info-text{
+    flex-direction: row;
+    margin: 0px;
+}
+
+
+.Main_info-text h1{
+ font-size: 3.5rem;
+ width: 300px;
+ height: 240px;
+ margin-right: 80px;
+}
+
+
+    .Main_top{
+        grid-area: top;
+        height: 80%;
+    }
+
+    .Main_top h4{
+        font-size: 3rem;
+    }
+
+    .Main_info-p{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .Main_info-p p{
+        font-size: 1.2rem;
+    }
+   
+
+    .Main_info-p button{
+        width: 200px;
+        height: 50px;
+    }
+
+
+
+    .Main_top{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .Main_top p{
+        font-size: 1.1rem;
+    }
+
+    .Main_top-item{
+        display: grid;
+        grid-template-columns: 120px 250px;
+        grid-template-rows: 1fr;
+        place-items: stretch;
+        align-items: center;
+    }
+    .Main_top-item img{
+        width: 100%;
+        height: auto;
+        align-self: stretch;
+    }
+
+    .Main_news{
+        grid-area: new;
+        height: 80%;
+        margin: 0px;
+        padding: 20px;
+        padding-block: 40px;
+        align-self: stretch;
+    }
+
+    .Main_news h3{
+        font-size: 1.5rem;
+    }
+
+    .Main_news p{
+        font-size: 1.2rem;
+    }
+
     .Header-burger,.Header_close {
         display: none;
     }
@@ -268,11 +426,13 @@ hr{
     .Header_menu ul{
         display: flex;
         align-items: center;
+        width: 100%;
         
     }
     .Header_menu ul li{
         font-weight: 400;
         margin: 0px;
+        margin-inline: 10px;
         
     }
 
@@ -281,21 +441,4 @@ hr{
         padding-left: 0px;
 
     }
-
-
-    .Main_top {
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-block: 50px ;
-    }
-
-    .Main_top-item {
-        width: 100%;
-    }
-
-    .Main_news{
-        margin-top: 50px;
-    }
-
-    
 }

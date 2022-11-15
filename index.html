@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
 
   <title>Frontend Mentor | News homepage</title>
@@ -14,36 +14,42 @@
 </head>
 <body>
  <div class="dummy"></div>
-  <header class="Header" >
-    
-    <img src="./assets/images/logo.svg" alt="logo">
-    <svg class="Header-burger"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-    </svg>
-    <nav class="Header_menu">
-      <svg  class="Header_close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg>
-      <ul>
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
-      </ul>
-    </nav>
-    
-  </header>
+  
 
   <main class="Main" >
+    <header class="Header" >
+    
+      <img  src="./assets/images/logo.svg" alt="logo">
+      <svg class="Header-burger"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+      <nav class="Header_menu">
+        <svg  class="Header_close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+        </svg>
+        <ul>
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </nav>
+      
+    </header>
+    <div class="Main_img">
+    </div>
     <article class="Main_info">
-      <img src="./assets/images/image-web-3-mobile.jpg"  class="Main_image"></img>
       <div class="Main_info-text">
+        <div class="Main_info-h1">
+          <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="Main_info-p">
 
-        <h1>The Bright Future of Web 3.0?</h1>
-        <p> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-          But is it really fulfilling its promise? </p>
-          <button>READ MORE</button>
+          <p> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise? </p>
+            <button>READ MORE</button>
+          </div>
         </div>
     </article> 
     <article class="Main_news">
@@ -55,14 +61,14 @@
           Will hydrogen-fueled cars ever catch up to EVs?
         </p>
       </section>
-<hr>
+<hr class="Hr">
       <section class="Main_news-item">
         <h3>  The Downsides of AI Artistry</h3>
         <p>
           What are the possible adverse effects of on-demand AI image generation?
         </p>
       </section>
-      <hr>
+      <hr class="Hr" >
 
       <section class="Main_news-item">
         <h3>Is VC Funding Drying Up?</h3>
@@ -77,6 +83,7 @@
 
     <article class="Main_top">
       <section class="Main_top-item">
+        
         <img src="./assets/images/image-retro-pcs.jpg" alt="" class="Main_top-image">
         <div class="Main_top-text">
 
@@ -92,8 +99,8 @@
 
         <div class="Main_top-text">
         <h4>02</h4>
-        <p>The Growth of Gaming</p>
-        <p>How the pandemic has sparked fresh opportunities.</p>
+        <p>Top 10 Laptops of 2022</p>
+        <p>Our best picks for various needs and budgets</p>
       </div>
 
       </section>
@@ -104,8 +111,8 @@
 
         <div class="Main_top-text">
         <h4>03</h4>
-        <p>Reviving Retro PCs</p>
-        <p>What happens when old PCs are given modern upgrades?</p>
+        <p>The Growth of Gaming</p>
+        <p>How the pandemic has sparked fresh opportunities.</p>
       </div>
       </article>
 
@@ -113,11 +120,8 @@
   </main>
   <div class="attribution">
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Toggle the mobile menu (requires some JavaScript)
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a  target="_blank"  href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a  target="_blank" href="https://www.frontendmentor.io/profile/XxtbmfxX">Toro</a>.
   </div>
 
 
@@ -125,6 +129,7 @@
     const burger = document.querySelector('.Header-burger')
     const menu = document.querySelector('.Header_menu')
     const close = document.querySelector('.Header_close')
+
     const body = document.body
     const height = screen.height    
 
@@ -156,8 +161,9 @@
 
     })
 
+   
 
 
-  </script>
+  </script>@ext:esbenp.prettier-vscode@ext:esbenp.prettier-vscode
 </body>
 </html>

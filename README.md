@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [UwU](https://github.com/XxtbmfxX/front_news-homepage)
+- Live Site URL: [owo](https://xxtbmfxx.github.io/front_news-homepage/)
 
 ## My process
 
